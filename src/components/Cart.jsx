@@ -5,7 +5,7 @@ import { CartContext } from "../store/shopping-cart-context";
 export default function Cart() {
   const { items, updateItemQuantity } = useContext(CartContext); // when value changes, component function gets re-executed
 
-  const totalPrice = items.reduce(
+  const totalPrice = items.reduce( // regular JS function
     (acc, item) => acc + item.price * item.quantity,
     0
   );
